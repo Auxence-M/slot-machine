@@ -52,9 +52,6 @@ const VERTICAL_OFFSET = 25;
 // Number of pixels that separates each symbol on the grid
 const SYMBOL_OFFSET = 10;
 
-// Win Text font size
-const WIN_TEXT_FONT_SIZE = 28;
-
 export function slotMachine(app: Application<Renderer>) {
   // Reels positions
   const positions: number[] = [0, 0, 0, 0, 0];
@@ -84,7 +81,6 @@ export function slotMachine(app: Application<Renderer>) {
     text: "",
     style: {
       fontFamily: "Arial",
-      fontSize: WIN_TEXT_FONT_SIZE,
     },
   });
   app.stage.addChild(winningText);
@@ -180,6 +176,7 @@ export function scaleAndPosition(app: Application<Renderer>,
   playButton.position.y = gridHeight + (VERTICAL_OFFSET * 2);
 
   // Reposition and resize the text the be bellow the spin button
+  winText.style.fontSize = cellWidth / 4.5;
   winText.anchor.set(0.5, 0);
   winText.position.x = app.screen.width / 2;
   winText.position.y = gridHeight + playButton.height + (VERTICAL_OFFSET * 3);

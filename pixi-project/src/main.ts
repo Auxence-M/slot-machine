@@ -1,5 +1,9 @@
+/* eslint-disable */
 import { Application, Assets, Text } from "pixi.js";
 import { scaleAndPosition, slotMachine } from "./slotMachine.ts";
+
+// Loading text font size ratio, three percent of
+const LOADING_TEXT_FONT_SIZE_RATIO = 0.03;
 
 // Create a PixiJS application.
 const app = new Application();
@@ -9,7 +13,6 @@ const loadingText = new Text({
   text: "Loading: 0%",
   style: {
     fontFamily: "Arial",
-    fontSize: 30,
     align: "center",
   },
 });
@@ -18,7 +21,7 @@ const loadingText = new Text({
 loadingText.anchor.set(0.5, 0.5);
 app.stage.addChild(loadingText);
 
-// To keep track of progress and have the progress percentage increase on  the preload screen
+// To keep track of progress and have the progress percentage increase on the loading screen
 let currentProgress: number = 0;
 let targetProgress: number = 0;
 
@@ -69,6 +72,7 @@ async function preload() {
     }
 
     // Update text
+    loadingText.style.fontSize = app.screen.width * LOADING_TEXT_FONT_SIZE_RATIO;
     loadingText.text = `Loading: ${Math.round(currentProgress)}%`;
 
     // When asset loading is complete and current progress in very close to 100
