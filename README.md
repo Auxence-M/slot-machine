@@ -2,15 +2,15 @@
 
 - Clone the repository :
 ```
-git clone https://github.com/nicolasb-pearfiction/auxence-medja.git
+git clone https://github.com/Auxence-M/slot-machine.git
 ```
 
-- Navigate to the location of the file :
+- Navigate to the location of the directory :
 ```
-cd auxence-medja
+cd slot-machine
 ```
 
-- Go into the pixi-project folder
+- Go into the pixi-project directory
 ```
 cd pixi-project
 ```
