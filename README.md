@@ -1,3 +1,7 @@
+## Run on Stackblitz
+
+Link to Stackblitz environment: https://stackblitz.com/github/Auxence-M/slot-machine
+
 ## How to run
 
 - Clone the repository :
