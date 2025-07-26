@@ -10,11 +10,6 @@ git clone https://github.com/Auxence-M/slot-machine.git
 cd slot-machine
 ```
 
-- Go into the pixi-project directory
-```
-cd pixi-project
-```
-
 - Install all the dependencies:
 ```
 npm install
